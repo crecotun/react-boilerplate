@@ -3,6 +3,8 @@ import React from 'react'
 import { initializeStore } from 'src/store'
 import { Provider } from 'mobx-react'
 
+import 'src/styles/global/index.scss'
+
 class MyMobxApp extends App {
   static async getInitialProps(appContext: any) {
     // Get or Create the store with `undefined` as initialState

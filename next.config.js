@@ -7,6 +7,10 @@ module.exports = withTypescript(
       return config
     },
     cssModules: true,
-    sassLoaderOptions: {},
+    sassLoaderOptions: {
+      data: `
+        @import 'src/styles/mixins/index.scss';
+      `
+    },
   }),
 )
