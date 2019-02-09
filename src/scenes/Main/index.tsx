@@ -1,11 +1,11 @@
 import * as React from 'react'
-import Button from 'src/components/Button'
+import Counter from 'src/components/Counter'
 
 const Main: React.FunctionComponent = () => {
   return (
     <div>
       Custom React Boilerplate <br />
-      <Button />
+      <Counter />
     </div>
   )
 }
