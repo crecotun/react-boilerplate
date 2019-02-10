@@ -7,20 +7,20 @@ useStaticRendering(isServer)
 export class RootStore {
   public counter: CounterStore
 
-  constructor(initialData?: any) {
+  constructor() {
     this.counter = new CounterStore()
   }
 }
 
 let store: RootStore | null = null
 
-export function initializeStore(initialData?: any) {
+export function initializeStore() {
   // Always make a new store if server, otherwise state is shared between requests
   if (isServer) {
-    return new RootStore(initialData)
+    return new RootStore()
   }
   if (store === null) {
-    store = new RootStore(initialData)
+    store = new RootStore()
   }
   return store
 }

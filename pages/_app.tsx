@@ -26,9 +26,7 @@ class MyMobxApp extends App {
   constructor(props: any) {
     super(props)
     const isServer = typeof window === 'undefined'
-    this.mobxStore = isServer
-      ? props.initialMobxState
-      : initializeStore(props.initialMobxState)
+    this.mobxStore = isServer ? props.initialMobxState : initializeStore()
   }
 
   render() {
