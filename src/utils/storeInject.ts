@@ -23,6 +23,7 @@ export function inject<I extends {} = {}>(
       Component = observer(Component)
     }
 
+    // @ts-ignore
     return mobxInject(injector)(Component)
   }
 }
